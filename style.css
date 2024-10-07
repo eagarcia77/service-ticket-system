@@ -1,0 +1,102 @@
+/* Variables para dark/light mode */
+:root {
+    --main-bg-color: #f0f0f3;
+    --main-text-color: #333;
+    --main-border-color: #ddd;
+    --main-shadow-light: rgba(255, 255, 255, 0.7);
+    --main-shadow-dark: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] {
+    --main-bg-color: #181818;
+    --main-text-color: #fff;
+    --main-border-color: #555;
+    --main-shadow-light: rgba(0, 0, 0, 0.5);
+    --main-shadow-dark: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 50%;
+    background-color: var(--main-bg-color);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 8px 8px 16px var(--main-shadow-dark), -8px -8px 16px var(--main-shadow-light);
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--main-text-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--main-text-color);
+}
+
+textarea, select, button {
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset 4px 4px 8px var(--main-shadow-dark), inset -4px -4px 8px var(--main-shadow-light);
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+textarea:focus, select:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--main-border-color);
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 4px 4px 8px var(--main-shadow-dark), -4px -4px 8px var(--main-shadow-light);
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:focus {
+    box-shadow: 0 0 0 3px var(--main-border-color);
+}
+
+.toggle-theme {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.toggle-theme button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-theme button:hover {
+    background-color: #0056b3;
+}

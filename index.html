@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Tickets - IA Accesible</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Tickets de Servicio <span class="ai-label">IA Accesible</span></h1>
+
+        <form id="ticketForm" aria-label="Formulario de ticket de servicio">
+            <label for="description">Descripción del problema:</label>
+            <textarea id="description" name="description" rows="4" aria-required="true" required></textarea>
+
+            <label for="priority">Prioridad:</label>
+            <select id="priority" name="priority" aria-required="true">
+                <option value="alta">Alta</option>
+                <option value="media">Media</option>
+                <option value="baja">Baja</option>
+            </select>
+
+            <button type="submit" aria-label="Enviar ticket">Enviar Ticket</button>
+        </form>
+
+        <div id="ticketResponse" aria-live="polite" role="alert">
+            <!-- Resultados y sugerencias automáticas aparecerán aquí -->
+        </div>
+
+        <div class="toggle-theme">
+            <button id="darkModeToggle">Cambiar a modo oscuro</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
